@@ -1,0 +1,38 @@
+def add():
+    return a+b
+def sub():
+    return a-b
+def mul():
+    return a*b
+def div():
+    if b==0:
+        print("You can't divide a number with zero")
+        return None
+    return a/b
+
+print("Welocome")
+c=1
+while c==1:
+    print("1-addition\n2-substriction\n3-multipilation\n4-division\nSelect a operator:")
+    op=input()
+    if not op.isdigit() or int(op)<1 or int(op)>4:
+        print("Please enter a valid input")
+        continue
+    a=float(input("Please enter your first number: "))
+    b=float(input("Please enter your second number: "))
+    if op=='1':
+        result=add()
+    elif op=='2':
+        result=sub()
+    elif op=='3':
+        result=mul()
+    elif op=='4':
+        result=div()
+    if result is not None:
+        print("Your result is: ", result)
+    des=input("Do you want to try again? (Press Y to restart): ")
+    if des=='Y' or des=='y':
+        continue
+    else:
+        print("You have exit the program")
+        break
